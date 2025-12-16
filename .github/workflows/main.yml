@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -11,4 +11,3 @@ jobs:
         uses: ArtemSBulgakov/buildozer-action@v1
         with:
           buildozer_version: master
-          python_version: 3.11
