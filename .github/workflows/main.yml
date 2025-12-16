@@ -3,12 +3,12 @@ on: [push, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
 
       - name: Build with Buildozer
-        uses: AndreMiras/pyproject-android@v0.1.1
+        uses: ArtemSBulgakov/buildozer-action@v1
         with:
-          project_path: .
-          spec_file: buildozer.spec
+          buildozer_version: master
+          python_version: 3.11
